@@ -1,0 +1,86 @@
+/* index.css */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f5;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth; /* 👈 enables smooth scroll */
+}
+
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Input Fields */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Labels & Text */
+label {
+  cursor: pointer;
+  color: #0066cc;
+  font-size: 0.9rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility classes */
+.div1 {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

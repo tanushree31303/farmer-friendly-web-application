@@ -1,0 +1,155 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header bar at the top */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #66ba66;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+}
+
+/* Logo styling */
+.logo {
+    height: 60px;
+}
+
+/* Welcome text */
+.header label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 20px;
+
+
+}
+
+/* Menu items in top bar */
+/* Menu items in top bar - text link style */
+.menulist ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+.menulist li {
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    color: #ffffff; /* white text for header */
+    padding: 6px 0;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+/* Underline effect on hover */
+.menulist li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.menulist li:hover::after {
+    width: 100%;
+}
+
+.menulist li:hover {
+    color: #f0f0f0;
+}
+
+/* Optional: hide menu item icons if not needed */
+.menulist li img {
+    display: none;
+}
+
+
+/* Menu icon on right (dropdown trigger) */
+.menu-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-icon {
+    height: 28px;
+    width: 28px;
+}
+
+/* Dropdown menu styling */
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    top: 48px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1000;
+    color: black;
+    min-width: 140px;
+}
+
+.dropdown-content div {
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.dropdown-content div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Logout icon inside dropdown */
+.dropdown-content .logout {
+    height: 20px;
+    margin-left: 10px;
+}
+
+/* Main content area */
+.content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.outlet {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+    min-width: 0;
+    border-top: 1px solid #ddd;
+}
+
+.cart-icon-wrapper {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.cart-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
